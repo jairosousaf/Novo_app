@@ -1,0 +1,37 @@
+<div class="box-form">
+    <h3>CADASTRO</h3>
+    <hr style="border-color: #7E7B7C">
+
+    <form action="{% url 'cadastro' %}" method="POST"> {% csrf_token %}
+        <label>Nome completo:</label>
+        <input type="text" class="form-control" placeholder="Nome completo..." name="nome_completo">
+        <br>
+        <label>Username:</label>
+        <input type="text" class="form-control" placeholder="Username..." name="username">
+        <br>
+        <label>Celular:</label>
+        <input type="text" class="form-control" placeholder="Celular..." name="celular">
+        <br>
+        <label>Telefone fixo:</label>
+        <input type="text" class="form-control" placeholder="Telefone fixo..." name="telefone_fixo">
+        <br>
+        {% comment %} <label>E-mail:</label>
+        <input type="email" class="form-control" placeholder="E-mail..." name="email">
+        <br> {% endcomment %}
+        <div class="row">
+            <div class="col-md">
+                <label>Senha:</label>
+                <input type="password" class="form-control" placeholder="Senha..." name="senha">
+            </div>
+
+            <div class="col-md">
+                <label>Confirmar senha:</label>
+                <input type="password" class="form-control" placeholder="Confirmar senha..." name="confirmar_senha">
+            </div>
+        </div>
+            <a href="#" class="link">Você já possui uma conta cadastrada</a>
+        <br>
+        <br>
+        <input type="submit" value="CADASTRAR" class="btn-principal">
+    </form>
+</div>
